@@ -108,6 +108,7 @@ div:last-child {
 
 table {
     width: 60%;
+    margin: auto;
 }
 
 td {
