@@ -15,7 +15,11 @@ for(const item of lista) {
   }
 }
 console.log(novaLista)
-//
+//a.push adiciona um item a um array
+//b. O valor impresso seria [10, 15, 25, 30] (os numeros que divididos por 5 tem resto zero)
+//c. Se o numero fosse 3, os valores impressos seriam [12, 15, 18, 21, 27, 30] 
+//pois são os números que divididos por3 tem resto igual a zero
+//Já se o número fosse 4, [12]
 
 
 //exerc.3a
