@@ -1,0 +1,10 @@
+body {
+    background-image: url(FundoPapaiEu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+img {
+    border-radius: 50%;
+}
