@@ -1,0 +1,32 @@
+.conteiner {
+    display: grid;        
+}
+
+.header {
+    background-color: red;
+}
+
+.setor2 {
+    display: grid;
+}
+
+.coluna1 {
+    background-color: blue;
+}
+
+.coluna2 {
+    background-color: yellow;
+}
+
+.coluna3 {
+    background-color: green;
+}
+
+.setor3 {
+    background-color: black;
+    color:white;
+}
+
+.setor4 {
+
+}
