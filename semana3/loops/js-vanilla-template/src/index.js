@@ -1,3 +1,4 @@
+//exercicio1
 let sum = 0
 for(let i = 0; i < 15; i++) {
   sum += i
@@ -6,6 +7,8 @@ console.log(sum)
 //O resultado impresso é 105
 //O programa está criando a soma de todos valores de i enquanto eles forem menores que 15
 
+
+//exercicio2
 const lista = [10, 11, 12, 15, 18, 19, 21, 23, 25, 27, 30]
 const novaLista = []
 const numero = 5
@@ -20,6 +23,7 @@ console.log(novaLista)
 //c. Se o numero fosse 3, os valores impressos seriam [12, 15, 18, 21, 27, 30] 
 //pois são os números que divididos por3 tem resto igual a zero
 //Já se o número fosse 4, [12]
+
 
 
 //exerc.3a
@@ -50,5 +54,27 @@ novasBatatas = []
 for(num of batatas) {
   multiDez = num/10
   novasBatatas.push(multiDez)
+  
 }
- console.log (novasBatatas)
+
+console.log (novasBatatas)
+
+ //exerc.3c
+ // O resultado foi [2, 4, 8, 82, 90, 94]
+ let batatas = [2, 4, 8, 33, 37 ,82, 7, 55, 90 ,94]
+ let novo array = []
+ let numeroDivisao = 2
+
+for (num of batatas) {
+  if(num%numeroDivisao === 0) {
+    batatasPares.push(num)
+  }
+}
+
+console.log(batatasPares)
+
+
+//exerc.3d
+
+
+ //d. Escreva um programa que gere um novo array contendo strings, da seguinte forma: "O elemento do índex i é: numero"
