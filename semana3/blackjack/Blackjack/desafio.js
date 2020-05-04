@@ -59,9 +59,13 @@ if(confirm("Deseja iniciar uma rodada?")) {
    // 5. Exibir resultados:
    alert("Usuário - cartas:" + textocartasjogador + " - pontuação: " + pontosjogador + "\n" +
          "Computador - cartas:" + textocartascomputador + " - pontuação: " + pontoscomputador);
-   if(pontosjogador === pontoscomputador){
+   if(pontosjogador > 21){
+      alert("O computador ganhou!");
+   } else if(pontosjogador === pontoscomputador){
       alert("Empate!");
-   } else if ((pontosjogador > pontoscomputador) && (pontosjogador <= 21)) {
+   } else if(pontoscomputador > 21){
+      alert("O usuário ganhou!");
+   } else if (pontosjogador > pontoscomputador) {
       alert("O usuário ganhou!");
    } else {
       alert("O computador ganhou!");
