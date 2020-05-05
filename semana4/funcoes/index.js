@@ -54,7 +54,8 @@ console.log(funcao(arrayDeNumeros, 9)); -----esse retornaria no console a posiç
 /*Essa funçao vai adicionando x a variavel resultadoA (que tem valor 0 no começo), 
 enquanto vai multiplicando na variavel resultadoB (que tem valor 1)...
 usando o for of pra isso.
-Esses resultados são adicionados, com uso do .push(), à array final.*/
+Esses resultados são adicionados, com uso do .push(), à array final.
+Porém, eu não consegui chamar essa função com sucesso */
 function metodo(array) {
     let resultadoA = 0;
     let resultadoB = 1;
@@ -70,4 +71,13 @@ function metodo(array) {
     return arrayFinal;
 
   }
+  
+//exercicio4
+//a)
+function anosDeCao (i) {
+   let idadeCachorro = i*7;
+   return idadeCachorro;
+}
+console.log(anosDeCao(4))
+
   
