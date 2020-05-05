@@ -73,11 +73,27 @@ function metodo(array) {
   }
   
 //exercicio4
-//a) no console.log coloquei um número pra testar e retornou 28
-function anosDeCao (i) {
-   let idadeCachorro = i*7;
-   return idadeCachorro;
+//a) eu criei uma função que multiplica por sete o número que for colocado na hora de chamar a função, dando assim a idade humana equivalente
+//no console.log coloquei um número pra testar e retornou 28
+function idadeCao (i) {
+   let equivalenteHumano = i*7;
+   return equivalenteHumano;
 }
-console.log(anosDeCao(4))
+console.log(idadeCao(4))
 
-  
+//b)
+//aqui coloquei a variável estuda/não estuda como condição pro if else... deixei os outros parametros pra serem colocados pela pessoa ao chamar a funcao
+//então criei uma variável que chama a função com alguns dados e dei um console.log
+//o resultado que apareceu no console foi o esperado "Eu me chamo Ana, tenho 200 anos, moro em Marte e sou estudante"
+function perfilPessoa (nome,idade,end,estuda) {
+    if (estuda === true) {
+        console.log(`Eu me chamo ${nome}, tenho ${idade} anos, moro em ${end} e sou estudante`);
+    } else {
+        console.log(`Eu me chamo ${nome}, tenho ${idade} anos, moro em ${end} e não sou estudante`);
+    }
+
+    return
+}
+
+let minhaPessoa = perfilPessoa ("Ana", 200, "Marte", true);
+console.log(minhaPessoa);
