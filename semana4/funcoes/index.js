@@ -73,7 +73,7 @@ function metodo(array) {
   }
   
 //exercicio4
-//a)
+//a) no console.log coloquei um número pra testar e retornou 28
 function anosDeCao (i) {
    let idadeCachorro = i*7;
    return idadeCachorro;
