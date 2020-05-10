@@ -1,3 +1,5 @@
+//INTERPRETAÇÃO DE CÓDIGO
+
 /*Exercício1
 Foi feita uma função que possui um argumento valorEmDolar.
  Nessa função, um prompt pede que o usuario dê a cotação do dolar 
@@ -57,10 +59,8 @@ i++;
 //FUNÇÕES
 
 /*Exercício2*/
-
-function alertaFuture () {
-     alert("Hello Future4!");
-     return;
- }
+let alertaFuture = () => {
+    alert("Hello Future4!");
+}
 
 alertaFuture ();
