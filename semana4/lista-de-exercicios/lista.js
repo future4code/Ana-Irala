@@ -302,4 +302,33 @@ console.log(dados);
 console.log(criancas);
 console.log(adultos);
 
-//testando se o github esta funcionando
+/*Exercício2
+*/
+const array = [1, 2, 3, 4, 5, 6];
+
+function arrayDobro(x){
+	return x.map(function(z){
+		return 2 * z;
+	});
+}
+
+function arrayTriploString(x){
+	return x.map(function(z){
+		return "" + (3 * z);
+	});
+}
+
+function arrayIdentificandoPares(x){
+	return x.map(function(z){
+		if(z % 2 === 0){
+			return "" + z + " é par";
+		} else {
+			return "" + z + " é ímpar";
+		}
+	});
+}
+
+console.log(array);
+console.log(arrayDobro(array));
+console.log(arrayTriploString(array));
+console.log(arrayIdentificandoPares(array));
