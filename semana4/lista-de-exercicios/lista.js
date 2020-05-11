@@ -375,3 +375,35 @@ function selecionarQueremEntrarMasNaoPodem(x){
 console.log(pessoas);
 console.log(selecionarAutorizados(pessoas));
 console.log(selecionarQueremEntrarMasNaoPodem(pessoas));
+
+/*Exercício4
+*/
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+
+function construirTextosEmails(x){
+	return x.map(function(z){
+		if(z.cancelada){
+			if(z.genero === "masculino") {
+				return `Olá, Sr. ${z.nome}. Infelizmente, sua consulta marcada para o dia ${z.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la.`;
+			} else {
+				return `Olá, Sra. ${z.nome}. Infelizmente, sua consulta marcada para o dia ${z.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la.`;
+			}
+		} else {
+			if(z.genero === "masculino") {
+				return `Olá, Sr. ${z.nome}. Estamos enviando esta mensagem para lembrá-lo da sua consulta no dia ${z.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`;
+			} else {
+				return `Olá, Sra. ${z.nome}. Estamos enviando esta mensagem para lembrá-la da sua consulta no dia ${z.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`;
+			}
+		}
+	});
+}
+
+console.log(consultas);
+let textosEmails = construirTextosEmails(consultas);
+console.log(textosEmails);
