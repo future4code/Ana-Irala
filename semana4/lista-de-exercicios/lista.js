@@ -60,7 +60,7 @@ Abaixo temos os três exemplificados interagindo com a mesma array:
 */
 let array = [ 0, 1, 2, 3, 4, 5 ];
 
-function cadaElemento(elemento, index, array) {
+function cadaElemento(elemento, index) {
     console.log("[" + index + "] = " + elemento);
 }
 array.forEach(cadaElemento);
@@ -69,7 +69,6 @@ fuction calculaDobro(numero) {
 	console.log(numero * 2);
 	return numero * 2;
 }
-
 let dobros = array.map(calculaDobro);
 dobros.forEach(cadaElemento);
 
@@ -81,11 +80,11 @@ var pares = array.filter(par);
 pares.forEach(cadaElemento);
 
 /*Exercício2
-a)
-b)
-c)
-d)
-e)
+a)false
+b)false
+c)true
+d)true
+e)false
 */
 const booleano1 = true
 const booleano2 = false
