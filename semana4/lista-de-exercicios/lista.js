@@ -28,6 +28,23 @@ Foi feita uma função que possui um argumento valorEmDolar.
  */
 
  /* Exercício3
+ Temos três variáveis, um array com números (const numeros) e 
+ dois arrays ainda vazios (const array1 e const array2).
+ Depois, usando um for of, nós vamos "correr" pelo array numeros e selecionar 
+ os números contidos nesse array em pares e ímpares. 
+ Se eles forem pares (dividindo o número por 2 o resto é zero), 
+ ele será adicionado ao array1 (usando o array1.push(numero));
+ Senão (else), ele será adicionado ao array2 (usando o .push()).
+ Depois daremos um console.log em que pediremos o número total de números e, para isso,
+ utilizaremos o numeros.length. Será impresso no console : 
+ "Quantidade total de números 14".
+ Depois, utilizaremos o .length para fazer o mesmo com array1 e array2.
+ No console.log(array1.length), teremos no console o número 6;
+ No console.log(array2.length), teremos no console o número 8.
+*/
+
+/*Exercício4
+
 
 
 
@@ -91,3 +108,36 @@ function anonimizarPessoa (objeto) {
 
 let perfilAnonimo = anonimizarPessoa(perfilPessoa);
 console.log(perfilAnonimo)
+
+//FUNÇÕES DE ARRAY
+
+/*Exercício1
+*/
+let dados = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+function selecionaCriancas(x){
+	function isCrianca(value) {
+		return value.idade < 20;
+	}
+	return x.filter(isCrianca);
+}
+
+let criancas = selecionaCriancas(dados);
+
+function selecionaAdultos(x){
+	function isAdulto(value) {
+		return value.idade >= 20;
+	}
+	return x.filter(isAdulto);
+}
+
+let adultos = selecionaAdultos(dados);
+
+console.log(dados);
+console.log(criancas);
+console.log(adultos);
