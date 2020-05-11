@@ -84,7 +84,27 @@ i++;
 
 /*Exercício4
 */
-
+function triangulos (a,b,c) {
+    if (a===b){
+       if (b===c){
+           return "Equilátero"
+       }
+       else{
+           return "Isósceles"
+       }
+    }
+    else {
+        if (b===c) {
+            return "Isósceles"
+        }
+        else if (a===c) {
+            return "Isósceles"
+        }
+        else {
+            return "Escaleno"
+        }
+    }
+}
 
 
 
