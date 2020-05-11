@@ -302,3 +302,4 @@ console.log(dados);
 console.log(criancas);
 console.log(adultos);
 
+//testando se o github esta funcionando
