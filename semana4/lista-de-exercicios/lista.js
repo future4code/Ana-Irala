@@ -44,6 +44,12 @@ Foi feita uma função que possui um argumento valorEmDolar.
 */
 
 /*Exercício4
+Nós temos um array com numeros e depois duas variaveis numero1, numero2. 
+Utilizando um for of, vamos percorrer todo o array e, no primeiro if, vai encontrar o menor número 
+existente na array numeros.
+no segundo if, vamos encontrar o maior numero existente na array numeros.
+No final, chamaremos um console.log(numero1), que imprimirá no console o número -10 e no
+console.log(numero2), imprimirá no console o número 1590.
 */
 
 
@@ -407,3 +413,26 @@ function construirTextosEmails(x){
 console.log(consultas);
 let textosEmails = construirTextosEmails(consultas);
 console.log(textosEmails);
+
+/*Exercicio5
+*/
+const contas = [
+	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+
+function atualizarSaldoTotal(contasAAtualizar){
+	for(let c of contasAAtualizar){
+		for(let w of c.compras){
+			c.saldoTotal = c.saldoTotal - w;
+		}
+	}
+}
+
+atualizarSaldoTotal(contas);
+console.log("Depois:");
+console.log(contas);
