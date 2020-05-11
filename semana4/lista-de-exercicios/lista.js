@@ -106,6 +106,36 @@ function triangulos (a,b,c) {
     }
 }
 
+/*Exercício5
+*/
+function logica5 (x, y) {
+	console.log("ENTRADA:");
+	console.log(x + " e " + y);
+	console.log("");
+	console.log("SAÍDA:");
+	let maior;
+	let menor;
+	if(x > y) {
+		maior = x;
+		menor = y;
+	} else {
+		maior = y;
+		menor = x;
+	}
+	console.log("O maior é: " + maior);
+	if (x % y == 0) {
+		console.log(x + " é divisível por " + y);
+	} else {
+		console.log(x + " não é divisível por " + y);
+	}
+	if (y % x == 0) {
+		console.log(y + " é divisível por " + x);
+	} else {
+		console.log(y + " não é divisível por " + x);
+	}
+	console.log("A diferença entre eles é " + (maior - menor));
+}
+
 
 
 
