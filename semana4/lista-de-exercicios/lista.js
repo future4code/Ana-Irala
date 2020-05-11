@@ -207,6 +207,28 @@ alertaFuture ();
 
 //OBJETOS
 
+/*Exercício1
+Array é uma lista, um conjunto de informações, de dados indexados, em que cada elemento possui um index que indica sua posição.
+Objetos são uma espécie de variável mas que possui vários atributos.De certa maneira, objetos são como 
+arrays que, ao invés de possui index, possui nomes que possuem um valor.
+*/
+
+/*Exercício2
+Crie uma função chamada criaRetangulo que recebe como parâmetros dois lados
+ (lado1 e lado2) e retorna um objeto com 
+ 4 informações: largura (lado1), altura (lado2), 
+ perímetro (2 * (lado1 + lado2)) e área (lado1 * lado2).
+*/
+function criaRetangulo (lado1, lado2) {
+    let retangulitos = {
+        largura: lado1,
+        altura: lado2,
+        perimetro: 2*(lado1 + lado2),
+        area: lado1 * lado2,
+    }
+    return retangulitos
+}
+
 /*Exercício4*/
 let perfilPessoa = {
     nome: "Fulano da Silva",
