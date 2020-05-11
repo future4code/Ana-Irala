@@ -54,6 +54,18 @@ Foi feita uma função que possui um argumento valorEmDolar.
 
 //LOGICA DE PROGRAMACAO
 
+/*Exercício2
+a)
+b)
+c)
+d)
+e)
+*/
+const booleano1 = true
+const booleano2 = false
+const booleano3 = !booleano2 //true
+const booleano4 = !booleano3 //false
+
 /*Exercício3
 O código original não funcionava por algumas razões... quantidadeDeNumerosPares não estava declarado
 nem tinha informação alguma;
@@ -69,6 +81,11 @@ while(i < quantidadeDeNumerosPares) {
 console.log(i*2);
 i++;
 }
+
+/*Exercício4
+*/
+
+
 
 
 
@@ -86,7 +103,6 @@ alertaFuture ();
 
 
 //OBJETOS
-
 
 /*Exercício4*/
 let perfilPessoa = {
@@ -108,6 +124,7 @@ function anonimizarPessoa (objeto) {
 
 let perfilAnonimo = anonimizarPessoa(perfilPessoa);
 console.log(perfilAnonimo)
+
 
 //FUNÇÕES DE ARRAY
 
@@ -141,3 +158,10 @@ let adultos = selecionaAdultos(dados);
 console.log(dados);
 console.log(criancas);
 console.log(adultos);
+
+
+
+const booleano1 = true
+const booleano2 = false
+const booleano3 = !booleano2 //true
+const booleano4 = !booleano3 //false
