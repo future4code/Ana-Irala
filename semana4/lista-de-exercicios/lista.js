@@ -54,6 +54,32 @@ Foi feita uma função que possui um argumento valorEmDolar.
 
 //LOGICA DE PROGRAMACAO
 
+/*Exercício1
+Três maneiras de se iterar um array é usando forEach, Map e filter.
+Abaixo temos os três exemplificados interagindo com a mesma array:
+*/
+let array = [ 0, 1, 2, 3, 4, 5 ];
+
+function cadaElemento(elemento, index, array) {
+    console.log("[" + index + "] = " + elemento);
+}
+array.forEach(cadaElemento);
+
+fuction calculaDobro(numero) {
+	console.log(numero * 2);
+	return numero * 2;
+}
+
+let dobros = array.map(calculaDobro);
+dobros.forEach(cadaElemento);
+
+function par(value) {
+  return (value % 2) == 0;
+}
+
+var pares = array.filter(par);
+pares.forEach(cadaElemento);
+
 /*Exercício2
 a)
 b)
@@ -215,3 +241,10 @@ const booleano1 = true
 const booleano2 = false
 const booleano3 = !booleano2 //true
 const booleano4 = !booleano3 //false
+
+
+let array = [ 0, 1, 2, 3, 4, 5 ];
+function logArrayElements(elemento, index, array) {
+    console.log("[" + index + "] = " + elemento);
+}
+array.forEach(logArrayElements);
