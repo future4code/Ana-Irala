@@ -332,3 +332,46 @@ console.log(array);
 console.log(arrayDobro(array));
 console.log(arrayTriploString(array));
 console.log(arrayIdentificandoPares(array));
+
+/*Exercício3
+*/
+const pessoas = [
+	{ nome: "Paula", idade: 12, altura: 1.8},
+	{ nome: "João", idade: 20, altura: 1.3},
+	{ nome: "Pedro", idade: 15, altura: 1.9},
+	{ nome: "Luciano", idade: 22, altura: 1.8},
+	{ nome: "Artur", idade: 10, altura: 1.2},
+	{ nome: "Soter", idade: 70, altura: 1.9}
+]
+
+function selecionarAutorizados(x){
+	return x.filter(function(z){
+		if(z.idade < 14){
+			return false;
+		} else if(z.idade > 60){
+			return false;
+		} else if(z.altura < 1.5){
+			return false;
+		} else {
+			return true;
+		}
+	});
+}
+
+function selecionarQueremEntrarMasNaoPodem(x){
+	return x.filter(function(z){
+		if(z.idade < 14){
+			return true;
+		} else if(z.idade > 60){
+			return true;
+		} else if(z.altura < 1.5){
+			return true;
+		} else {
+			return false;
+		}
+	});
+}
+
+console.log(pessoas);
+console.log(selecionarAutorizados(pessoas));
+console.log(selecionarQueremEntrarMasNaoPodem(pessoas));
