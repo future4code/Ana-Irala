@@ -163,6 +163,39 @@ function logica5 (x, y) {
 
 
 //FUNÇÕES
+/*Exercícios1*/
+let dados = [77, 55, 12, 96, 5, -56, -32, 6];
+
+function betas(array){
+	let maior = -Infinity;
+	let segundoMaior = -Infinity;
+	let menor = Infinity;
+	let segundoMenor = Infinity;
+	
+	for(let elemento of array){
+		if(elemento < menor){
+			segundoMenor = menor;
+			menor = elemento;
+		} else {
+			if(elemento < segundoMenor) {
+				segundoMenor = elemento;
+			}
+		}
+		if(elemento > maior){
+			segundoMaior = maior;
+			maior = elemento;
+		} else {
+			if(elemento > segundoMaior) {
+				segundoMaior = elemento;
+			}
+		}
+	}
+	
+	console.log("segundo menor = " + segundoMenor);
+	console.log("segundo maior = " + segundoMaior);
+}
+betas(dados);
+
 
 /*Exercício2*/
 let alertaFuture = () => {
