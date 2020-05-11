@@ -34,6 +34,7 @@ Foi feita uma função que possui um argumento valorEmDolar.
 
 
 
+
 //LOGICA DE PROGRAMACAO
 
 /*Exercício3
@@ -64,3 +65,29 @@ let alertaFuture = () => {
 }
 
 alertaFuture ();
+
+
+
+//OBJETOS
+
+
+/*Exercício4*/
+let perfilPessoa = {
+    nome: "Fulano da Silva",
+    idade: 33,
+    email: "fulano@gmail.com",
+    end: "Rua dos Fundos, 666, Cafundós",
+}
+
+function anonimizarPessoa (objeto) {
+    let perfilAnonimo = {
+        nome:"ANÔNIMO", 
+        idade: objeto.idade, 
+        email: objeto.email, 
+        end:objeto.end,
+    }
+    return perfilAnonimo
+}
+
+let perfilAnonimo = anonimizarPessoa(perfilPessoa);
+console.log(perfilAnonimo)
