@@ -5,13 +5,31 @@ import Post from './components/Post/Post';
 class App extends React.Component {
   render() {
     return (
-      <div className={'app-container'}>
-        <Post
-          nomeUsuario={'paulinha'}
-          fotoUsuario={'https://picsum.photos/50/50'}
-          fotoPost={'https://picsum.photos/200/150'}
-        />
-      </div>
+      <div>
+        <div className={'app-container'}>
+          <Post
+            nomeUsuario={'paulinha'}
+            fotoUsuario={'https://picsum.photos/50/50'}
+            fotoPost={'https://picsum.photos/200/150'}
+          />
+        </div>
+
+        <div className={'app-container'}>
+          <Post
+            nomeUsuario={'marie'}
+            fotoUsuario={'https://picsum.photos/50/30'}
+            fotoPost={'https://picsum.photos/200/120'}
+         />
+       </div>
+
+       <div className={'app-container'}>
+          <Post
+            nomeUsuario={'ada'}
+            fotoUsuario={'https://picsum.photos/50/20'}
+            fotoPost={'https://picsum.photos/200/130'}
+         />
+       </div>
+     </div>
     );
   }
 }

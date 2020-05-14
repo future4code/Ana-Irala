@@ -1,14 +1,16 @@
 import React, {Component} from 'react'
 import './SecaoComentario.css'
 
-export class SecaoComentario extends Component {
+export class SecaoComentario extends React.Component {
 	state = {
+		input: ""
 
 	}
 
-	onChangeComentario() {
-
-	}
+	onChangeComentario = (event) => {
+		const novoComentario = event.target.value
+		this.setStatus({ comentario : novoComentario })
+    }
 
 	render() {
 		return <div className={'comment-container'}>
