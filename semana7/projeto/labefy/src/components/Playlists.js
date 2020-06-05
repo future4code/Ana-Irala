@@ -1,5 +1,5 @@
 import React from 'react';
-
+import axios from 'axios';
 
 class Playlists extends React.Component {
     state = {
@@ -11,17 +11,29 @@ class Playlists extends React.Component {
         const newPlaylistValue = event.target.value;
         this.setState({ name: newPlaylistValue });
       };
-     
-      handleCreatePlaylist = event => { //aqui vai o axios post
-    
-      };
 
-   
-   
-   
-   
-   
-   
+
+      handleCreatePlaylist = event => { 
+          
+          const headers= {
+            Authorization: "ana-irala-mello"
+          };
+
+          const body = {
+            name: this.state.name,
+          };
+
+          axios.post(
+            'https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists' ,
+             headers ,
+             body
+            ).then(() => {
+                 console.log('deu certo!') //teste
+            }).catch(error => {
+                 console.log('erro!');
+                });
+        };
+
     render() {
         return (
             <div>
