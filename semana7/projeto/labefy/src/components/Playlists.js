@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const DeleteButton = styled.span`
   color: red;
@@ -83,7 +83,9 @@ class Playlists extends React.Component {
             alert("ERRO AO APAGAR PLAYLIST");
         });
     };
-        
+
+
+
     render() {
         return (
             <div>
@@ -103,8 +105,11 @@ class Playlists extends React.Component {
                         return (
                          <li key={playlist.id}>
                             {playlist.name}
+                            <button onClick={() => this.props.mudarParaPaginaMusicas(playlist.id, playlist.name)}>
+                                IR
+                            </button>
                             <DeleteButton onClick={() => this.handlePlaylistDeletion(playlist.id)}>
-                             x
+                                x
                             </DeleteButton>
                          </li>
                         );
