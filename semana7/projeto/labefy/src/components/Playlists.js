@@ -1,5 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import styled from "styled-components";
+
+const DeleteButton = styled.span`
+  color: red;
+  cursor: pointer;
+`;
 
 class Playlists extends React.Component {
     state = {
@@ -59,6 +65,24 @@ class Playlists extends React.Component {
             console.log('erro!');
         });
     };
+
+    handlePlaylistDeletion = playlistId => {
+        axios.delete(
+            `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${playlistId}`,
+            {
+                headers: {
+                    Authorization: 'ana-irala-mello'
+                }
+            }
+        )
+        .then(() => {
+            this.getPlaylist();
+            alert("Playlist apagada com sucesso!");
+        })
+        .catch(e => {
+            alert("ERRO AO APAGAR PLAYLIST");
+        });
+    };
         
     render() {
         return (
@@ -73,11 +97,20 @@ class Playlists extends React.Component {
                     </input>;
                     <button onClick={this.handleCreatePlaylist}>CRIAR PLAYLIST</button>;
                 </div>
-                <div>
+                
+                <ul>
                     {this.state.playlists.map(playlist => {
-                        return <p key={playlist.id}>{playlist.name}</p>;
+                        return (
+                         <li key={playlist.id}>
+                            {playlist.name}
+                            <DeleteButton onClick={() => this.handlePlaylistDeletion(playlist.id)}>
+                             x
+                            </DeleteButton>
+                         </li>
+                        );
                     })}
-                </div>
+                   
+                </ul>
             </div>
         );
     }
