@@ -24,4 +24,5 @@ function obterEstatisticas(numeros:number[]): {maior:number, menor:number, media
 type amostraDeIdades = {
     numeros:number[];
     obterEstatisticas: () => {maior:number, menor:number, media: number}
+
 }
